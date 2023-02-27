@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+#thecanvas{
+    padding-bottom: 25px;
+    float:right;
+}
+
+form {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+}
+input{
+    border:1px solid #555;
+    background-color: transparent;
+    width: 100%;
+    padding:10px;
+    border-radius:20px;
+    color:rgb(255, 255, 255);
+}
+.bubble{
+    border-radius: 20px;
+    background-color:rgb(228, 129, 134);
+    margin:4px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.bubble2{
+    text-align:right;
+    border-radius: 20px;
+    /* background-color:rgb(61, 7, 119); */
+    margin:4px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+/* .messages{
+    text-align:left;
+} */
+/* .message-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .message-row > div {
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    width: fit-content;
+    max-width: 50%;
+  } */
+.message-row.mine{
+    text-align:right;
+    
+}
+.message-row.mine .bubble2{
+    text-align:right;
+    background-color:  rgb(16, 205, 176);
+}
+
+.message-row.theirs{
+    text-align:left;
+    
+}
+.message-row.theirs .bubble{
+    text-align:left;
+    background-color: rgb(228, 129, 134);
+}
+
+/* glowing text on the top */
+
+.glowing-text {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glowing-text 1s ease-in-out infinite alternate;
+  -moz-animation: glowing-text 1s ease-in-out infinite alternate;
+  animation: glowing-text 1s ease-in-out infinite alternate;
+}
+@keyframes glowing-text {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e00e6, 0 0 40px #6300e6, 0 0 50px #c300e6, 0 0 60px #e200e6, 0 0 70px #e600ca;
+}
+  
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
